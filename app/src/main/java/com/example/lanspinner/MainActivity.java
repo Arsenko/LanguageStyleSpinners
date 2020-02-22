@@ -23,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void init(){
-        lanSpinner=findViewById(R.id.LanSpinner);
-        lanBut=findViewById(R.id.LanBut);
+        lanSpinner=findViewById(R.id.lanSpinner);
+        lanBut=findViewById(R.id.lanBut);
         lanBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
