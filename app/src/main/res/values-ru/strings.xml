@@ -6,4 +6,9 @@
         <item>en</item>
         <item>ru</item>
     </string-array>
+    <string-array name="styleSpinner">
+        <item>Чёрный</item>
+        <item>Зелёный</item>
+        <item>Синий</item>
+    </string-array>
 </resources>

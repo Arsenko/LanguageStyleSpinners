@@ -11,10 +11,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:entries="@array/lanSpinner"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/styleSpinner"/>
 
     <Button
         android:id="@+id/lanBut"
@@ -27,4 +27,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/lanSpinner"
         app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Spinner
+        android:id="@+id/styleSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/styleSpinner"
+        app:layout_constraintBottom_toTopOf="@+id/lanBut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lanSpinner" />
 </androidx.constraintlayout.widget.ConstraintLayout>

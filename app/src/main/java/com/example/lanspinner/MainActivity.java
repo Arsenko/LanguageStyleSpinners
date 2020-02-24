@@ -14,10 +14,12 @@ import java.util.Locale;
 public class MainActivity extends AppCompatActivity {
     Spinner lanSpinner;
     Button lanBut;
+    Spinner styleSpinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Utils.onActivityCreateSetTheme(this);
         setContentView(R.layout.activity_main);
         init();
     }
@@ -25,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private void init(){
         lanSpinner=findViewById(R.id.lanSpinner);
         lanBut=findViewById(R.id.lanBut);
+        styleSpinner=findViewById(R.id.styleSpinner);
         lanBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -39,6 +42,26 @@ public class MainActivity extends AppCompatActivity {
                         locale=new Locale("en");
                         break;
                     }
+                }
+                switch (styleSpinner.getSelectedItem().toString()){
+                    case "black":
+                        Utils.changeToTheme(MainActivity.this,1);
+                        break;
+                    case "green":
+                        Utils.changeToTheme(MainActivity.this,2);
+                        break;
+                    case "blue":
+                        Utils.changeToTheme(MainActivity.this,3);
+                        break;
+                    case "Чёрный":
+                        Utils.changeToTheme(MainActivity.this,1);
+                        break;
+                    case "Зелёный":
+                        Utils.changeToTheme(MainActivity.this,2);
+                        break;
+                    case "Синий":
+                        Utils.changeToTheme(MainActivity.this,3);
+                        break;
                 }
                 Configuration config = new Configuration();
                 config.setLocale(locale);
