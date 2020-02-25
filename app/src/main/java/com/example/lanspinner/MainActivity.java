@@ -44,22 +44,16 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
                 switch (styleSpinner.getSelectedItem().toString()){
-                    case "black":
-                        Utils.changeToTheme(MainActivity.this,1);
-                        break;
-                    case "green":
-                        Utils.changeToTheme(MainActivity.this,2);
-                        break;
-                    case "blue":
-                        Utils.changeToTheme(MainActivity.this,3);
-                        break;
                     case "Чёрный":
+                    case "Black":
                         Utils.changeToTheme(MainActivity.this,1);
                         break;
                     case "Зелёный":
+                    case "Green":
                         Utils.changeToTheme(MainActivity.this,2);
                         break;
                     case "Синий":
+                    case "Blue":
                         Utils.changeToTheme(MainActivity.this,3);
                         break;
                 }
